@@ -22,7 +22,7 @@ services:
       - app
     networks:
       - laravel
-  
+
   db:
     image: mysql:8.0
     container_name: laravel_db
@@ -41,5 +41,5 @@ services:
 networks:
   laravel:
 
-volums:
+volumes:
   dbdata:
