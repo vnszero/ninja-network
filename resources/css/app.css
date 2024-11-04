@@ -1,0 +1,130 @@
+body {
+    background-color: #f7fafc;
+    color: #4a5568;
+    font-family: "Rubik", sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f56565;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 1024px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+form {
+    max-width: 640px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    border: 1px solid #e2e8f0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centered-content {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.highlight {
+    border-left-width: 0.25rem;
+    border-left-color: #f56565;
+}
+
+.btn {
+    border-radius: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #e2e8f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #f56565;
+    color: #ffffff;
+}
