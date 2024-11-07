@@ -45,3 +45,7 @@ use App\Models\Ninja
 ## to create a register
 Ninja::create(['name' => 'Wario', 'skill' => 80, 'bio' => 'Lorem Ipsum'])
 Ninja::create(['name' => 'Mario', 'skill' => 70, 'bio' => 'Ipsum Lorem'])
+
+## use factory in tinker
+<!-- it will create 50 records -->
+Ninja::factory()->count(50)->create() 
