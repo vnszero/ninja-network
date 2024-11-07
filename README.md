@@ -49,3 +49,7 @@ Ninja::create(['name' => 'Mario', 'skill' => 70, 'bio' => 'Ipsum Lorem'])
 ## use factory in tinker
 <!-- it will create 50 records -->
 Ninja::factory()->count(50)->create() 
+
+## fresh and seed
+<!-- This will delete all old values in database -->
+docker compose exec app php artisan migrate:fresh --seed
