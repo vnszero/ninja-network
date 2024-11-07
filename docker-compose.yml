@@ -13,7 +13,6 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: db
     restart: unless-stopped
     tty: true
     environment:
@@ -23,6 +22,8 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
     networks:
       - ninja-network
 
@@ -43,9 +44,13 @@ services:
       - .:/var/www/html
     ports:
       - "5173:5173"
-    command: sh -c "npm install && npm run dev -- --host"  # Adicionando --host aqui
+    command: sh -c "npm install && npm run dev -- --host"
     networks:
       - ninja-network
+
+volumes:
+  db_data:
+    driver: local
 
 networks:
   ninja-network:
