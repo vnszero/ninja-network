@@ -12,15 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         $this->call([
-            NinjaSeeder::class,
+            DojoSeeder::class, // must become first in this case, because Dojo.id will be fk in Ninja table
+            NinjaSeeder::class
         ]);
     }
 }
