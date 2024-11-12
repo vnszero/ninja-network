@@ -128,3 +128,9 @@ textarea {
     background-color: #f56565;
     color: #ffffff;
 }
+
+.wild-card {
+    background-color: #e5e7eb;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
