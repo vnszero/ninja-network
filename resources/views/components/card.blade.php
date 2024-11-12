@@ -1,9 +1,9 @@
 @props([
-    'id' => 1,
+    'href' => '#',
     'highlight' => false
-    ])
+])
 
 <div @class(['highlight' => $highlight, 'card'])>
     {{ $slot }}
-    <a href="/ninjas/{{ $id }}" class="btn">View Details</a>
+    <a href="{{ $href }}" class="btn">View Details</a>
 </div>
