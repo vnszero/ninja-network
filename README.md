@@ -53,3 +53,6 @@ Ninja::factory()->count(50)->create()
 ## fresh and seed
 <!-- This will delete all old values in database -->
 docker compose exec app php artisan migrate:fresh --seed
+
+# Create pagination config file
+php artisan vendor:publish --tag=laravel-pagination

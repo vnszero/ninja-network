@@ -10,4 +10,7 @@
             </li>
         @endforeach
     </ul>
+
+    {{-- pagination --}}
+    {{ $ninjas->links() }}
 </x-layout>
