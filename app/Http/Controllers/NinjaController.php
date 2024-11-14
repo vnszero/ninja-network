@@ -12,7 +12,7 @@ class NinjaController extends Controller
         // fetch all records & pass into the index view
         // $ninjas = Ninja::orderBy('created_at', 'desc')->get(); // recover all
         // $ninjas = Ninja::orderBy('created_at', 'desc')->paginate(10); // recover 10 per page
-        $ninjas = Ninja::with('dojo')->orderBy('created_at', 'desc')->paginate(10); // with() optimize cascade query for fk relationship
+        $ninjas = Ninja::with('dojo')->orderBy('created_at', 'desc')->paginate(10); // with() optimize nested query for fk relationship
 
         return view('ninjas.index', ["ninjas" => $ninjas]);
     }
@@ -22,7 +22,7 @@ class NinjaController extends Controller
         // fetch a single record & pass into show view
 
         // $ninja = Ninja::findOrFail($id);
-        $ninja = Ninja::with('dojo')->findOrFail($id); // with() optimize cascade query for fk relationship
+        $ninja = Ninja::with('dojo')->findOrFail($id); // with() optimize nested query for fk relationship
 
         return view('ninjas.show', ["ninja" => $ninja]);
     }
