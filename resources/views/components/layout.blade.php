@@ -1,3 +1,4 @@
+{{-- <x-layout> --}}
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">

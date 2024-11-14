@@ -6,4 +6,13 @@
         <p><strong>About me:</strong></p>
         <p>{{ $ninja->bio }}</p>
     </div>
+
+    {{-- dojo info --}}
+    <div class="white-box">
+        <h3>Dojo Information</h3>
+        <p><strong>Dojo name:</strong> {{ $ninja->dojo->name }}</p>
+        <p><strong>Location:</strong> {{ $ninja->dojo->location }}</p>
+        <p><strong>About the Dojo:</strong></p>
+        <p>{{ $ninja->dojo->description }}</p>
+    </div>
 </x-layout>

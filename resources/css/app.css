@@ -179,3 +179,17 @@ textarea {
     color: #aaa;
     cursor: not-allowed;
 }
+
+.white-box {
+    border-width: 2px;
+    border-style: dashed;
+    border-color: black;
+    background-color: white;
+    padding: 0 16px 16px 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+.block {
+    display: block;
+}
