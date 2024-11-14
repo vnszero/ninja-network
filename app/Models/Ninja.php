@@ -10,4 +10,8 @@ class Ninja extends Model
     protected $fillable = ['name', 'skill', 'bio'];
 
     use HasFactory;
+
+    public function dojo() {
+        return $this->belongsTo(Dojo::class);
+    }
 }
