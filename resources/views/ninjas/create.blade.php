@@ -1,7 +1,7 @@
 <x-layout>
-    <form action="" method="">
+    <form action="{{ route('ninjas.store') }}" method="POST">
         @csrf
-        
+
         <h2>Create a New Ninja</h2>
 
         {{-- Ninja Name --}}
@@ -13,7 +13,7 @@
             required
         >
 
-        {{-- Ninja Strength --}}
+        {{-- Ninja Skill --}}
         <label for="skill">Ninja Skill:</label>
         <input 
             type="number"
@@ -43,7 +43,16 @@
         </select>
 
         <button type="submit" class="btn">Create Ninja</button>
-
-        {{-- validation errors --}}
     </form>
+
+    {{-- show errors to the user --}}
+    @if ($errors->any())
+        <div class="error-messages">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 </x-layout>

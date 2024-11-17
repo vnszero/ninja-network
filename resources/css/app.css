@@ -193,3 +193,13 @@ textarea {
 .block {
     display: block;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.error-messages ul {
+    color: red;
+    margin-top: 10px;
+}
