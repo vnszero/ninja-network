@@ -207,3 +207,11 @@ textarea {
     margin-bottom: 0.5rem; 
     color: #ef4444; 
 }
+
+.flash-message {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f0fdf4;
+    color: #22c55e;
+    font-weight: bold;
+}

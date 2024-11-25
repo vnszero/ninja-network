@@ -8,6 +8,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    @if(session('success'))
+        <div id="flash" class="flash-message">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <header>
         @if(!Request::is('/'))
             <nav>
