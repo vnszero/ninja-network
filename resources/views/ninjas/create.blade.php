@@ -10,6 +10,7 @@
             type="text"
             id="name"
             name="name"
+            value="{{ old('name') }}"
             required
         >
 
@@ -19,6 +20,7 @@
             type="number"
             id="skill"
             name="skill"
+            value="{{ old('skill') }}"
             required
         >
 
@@ -29,14 +31,14 @@
             id="bio"
             name="bio"
             required 
-        ></textarea>
+        >{{ old('bio') }}</textarea>
 
         {{-- Select Dojo --}}
         <label for="dojo_id">Dojo:</label>
         <select id="dojo_id" name="dojo_id" required>
             <option value="" disabled selected>Select a dojo</option>
             @foreach($dojos as $dojo)
-                <option value="{{ $dojo->id }}">
+                <option value="{{ $dojo->id }}" {{ $dojo->id == old('dojo-id') ? 'selected' : '' }}>
                     {{ $dojo->name }}
                 </option>
             @endforeach
@@ -47,12 +49,10 @@
 
     {{-- show errors to the user --}}
     @if ($errors->any())
-        <div class="error-messages">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+        <ul class="error-messages">
+            @foreach ($errors->all() as $error)
+                <li class="my-2 text-red-500">{{ $error }}</li>
+            @endforeach
+        </ul>
     @endif
 </x-layout>

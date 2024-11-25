@@ -194,12 +194,16 @@ textarea {
     display: block;
 }
 
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+.error-messages {
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem;
+    background-color: #fef2f2;
 }
-.error-messages ul {
-    color: red;
-    margin-top: 10px;
+
+.error-messages li {
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
+    color: #ef4444; 
 }
