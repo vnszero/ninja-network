@@ -36,6 +36,16 @@ class NinjaController extends Controller
         return view('ninjas.create', ["dojos" => $dojos]);
     }
 
+    public function destroy($id) {
+        // route --> /ninjas/{id} (DELETE)
+        // handle delete request to delete a ninja record from table
+
+        $ninja = Ninja::findOrFail($id);
+        $ninja->delete();
+
+        return redirect()->route('ninjas.index');
+    }
+
     public function store(Request $request) {
         // route --> /ninjas (POST)
         // handle POST request to store a new ninja record in table
