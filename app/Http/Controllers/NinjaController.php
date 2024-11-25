@@ -18,13 +18,14 @@ class NinjaController extends Controller
         return view('ninjas.index', ["ninjas" => $ninjas]);
     }
 
-    public function show($id) {
+    public function show(Ninja $ninja) {
         // route --> /ninjas/{id}
         // fetch a single record & pass into show view
 
         // $ninja = Ninja::findOrFail($id);
-        $ninja = Ninja::with('dojo')->findOrFail($id); // with() optimize nested query for fk relationship
-
+        // $ninja = Ninja::with('dojo')->findOrFail($id); // with() optimize nested query for fk relationship
+        $ninja->load('dojo');
+        
         return view('ninjas.show', ["ninja" => $ninja]);
     }
 
@@ -36,11 +37,12 @@ class NinjaController extends Controller
         return view('ninjas.create', ["dojos" => $dojos]);
     }
 
-    public function destroy($id) {
+    // public function destroy($id) {
+    public function destroy(Ninja $ninja) { // it will no longer use id, laravel will bind the object directly based in passed id
         // route --> /ninjas/{id} (DELETE)
         // handle delete request to delete a ninja record from table
 
-        $ninja = Ninja::findOrFail($id);
+        // $ninja = Ninja::findOrFail($id);
         $ninja->delete();
 
         return redirect()->route('ninjas.index')->with('success', 'Ninja deleted!');
