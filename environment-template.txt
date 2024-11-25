@@ -1,0 +1,12 @@
+you will need a .env file with the following config:
+
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+
+APP_KEY=
+
+LOG_CHANNEL=
