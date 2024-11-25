@@ -54,6 +54,8 @@ docker compose exec app php artisan migrate
 docker compose exec db mysql -u laravel -p
 ```
 
+---
+
 ## Artisan useful commands
 
 ### make:migration
@@ -69,6 +71,8 @@ php artisan make:model [ModelName] -mfs
         m to migration, 
         f to factory and 
         s to seed -->
+
+---
 
 ## artisan tinker
 ```bash
@@ -97,6 +101,8 @@ Ninja::factory()->count(50)->create()
 ```bash
 docker compose exec app php artisan migrate:fresh --seed
 ```
+
+---
 
 ## Create pagination config file
 ```bash
